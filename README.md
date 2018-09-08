@@ -1,1 +1,1 @@
-IntelliJ IDEAにインポートするためのサンプルプロジェクトです
+# ProgrammingInScala
