@@ -1,14 +1,9 @@
-import java.io.FileReader
+import org.stairwaybook.scells.SpreadSheet
+import scala.swing.{MainFrame, SimpleSwingApplication}
 
-import org.stairwaybook.parsing.JSON
-
-import scala.concurrent.{Await, Future, Promise}
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration.Duration
-import scala.util.{Failure, Success}
-
-object Main extends App with JSON {
-  val reader = new FileReader(
-    "/Users/n-aoki/work/programming-in-scala/src/main/scala/org/stairwaybook/parsing/address-book.json")
-  println(parseAll(value, reader))
+object Main extends SimpleSwingApplication {
+  def top = new MainFrame {
+    title = "ScalaSheet"
+    contents = new SpreadSheet(100, 26)
+  }
 }
